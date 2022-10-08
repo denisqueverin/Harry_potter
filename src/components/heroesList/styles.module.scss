@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Harry Potter Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Harry Potter Regular"),
+    url("../../fonts/HarryRegular.woff") format("woff");
+}
+
+@mixin btnLike {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  transition: 0.4s;
+}
+
+.heroesList {
+  align-items: center;
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  border: 1px solid #a85;
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 10px;
+
+  & .leftDiamond {
+    position: absolute;
+    left: -11px;
+    bottom: auto;
+  }
+
+  & .title {
+    font-family: "Harry Potter Regular";
+    height: 40px;
+    display: flex;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 1px;
+  }
+
+  & .locationBtn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  & .btnInfo {
+    position: relative;
+    font-size: 16px;
+    border: none;
+    height: 19px;
+    padding: 8px;
+    margin: 12px 22px;
+    color: #fff;
+    background-image: url(../../image/btn_bg.svg);
+    background-size: auto 100%;
+    background-color: transparent;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: bluu_nextbold, Crimson Text, serif;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  & .btnInfo:before {
+    background-image: url(../../image/btn_left.svg);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    right: 96%;
+    bottom: 0;
+    top: 0;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: calc(100% + 1px) 100%;
+  }
+
+  & .btnInfo:after {
+    background-image: url(../../image/btn_right.svg);
+    left: 99%;
+    top: 0;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: calc(100% + 1px) 100%;
+  }
+
+  & .btnLikeOn {
+    @include btnLike;
+    background-size: cover;
+    background-image: url(../../image/hearts.png);
+  }
+
+  & .btnLikeOff {
+    @include btnLike;
+    background-size: cover;
+    background-image: url(../../image/hearts-white.png);
+  }
+
+  & .rightDiamond {
+    position: absolute;
+    right: -11px;
+    bottom: auto;
+  }
+
+  & .photo {
+    background-size: cover;
+    width: 150px;
+    height: 187px;
+  }
+}

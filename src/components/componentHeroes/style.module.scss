@@ -1,0 +1,8 @@
+@use '../../pages/styles.module.scss';
+
+.containerHero {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    width: 100%;
+}

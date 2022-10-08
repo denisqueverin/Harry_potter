@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Harry Potter Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Harry Potter Regular"),
+    url("../fonts/HarryRegular.woff") format("woff");
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8vh;
+  & .subtitle {
+    font-family: "Harry Potter Regular";
+    font-size: 7vh;
+    color: black;
+    margin-top: 3.5vh;
+    font-weight: 700;
+  }
+  & .gif {
+    width: 90%;
+  }
+}
+
+.bodyContainer {
+  background-color: black;
+  padding-top: 50px;
+
+  & .containerLocation {
+    display: flex;
+  }
+
+  .chapter {
+    & .title {
+      color: white;
+      font-family: system-ui;
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    & .location {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .clearButton {
+    position: relative;
+    margin-top: 20px;
+    font-size: 19px;
+    border: none;
+    line-height: 1.4em;
+    height: 46px;
+    padding: 10px;
+    margin: 20px 32px;
+    color: #fff;
+    background-image: url(../image/btn_bg.svg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-color: transparent;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: bluu_nextbold, Crimson Text, serif;
+    font-weight: 700;
+  }
+
+  .clearButton:before {
+    background-image: url(../image/btn_left.svg);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    right: 100%;
+    bottom: 0;
+    top: 0;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: calc(100% + 1px) 100%;
+  }
+
+  .clearButton:after {
+    background-image: url(../image/btn_right.svg);
+    left: 100%;
+    top: 0;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: calc(100% + 1px) 100%;
+  }
+}
+
+.ulHeroes {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  width: 100%;
+  flex-basis: 25%;
+}

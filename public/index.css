@@ -1,0 +1,11 @@
+* {
+    cursor:url('./c.png'), default;
+}
+
+button, a {
+    cursor:url('./c-pointer.png'), pointer;
+}
+
+body {
+    margin: 0;
+}
