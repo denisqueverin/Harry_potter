@@ -46,6 +46,19 @@
     }
   }
 
+  .clearLittleButton {
+    font-family: system-ui;
+    border: white 2px solid;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    width: 130px;
+    height: 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+  }
+
   .clearButton {
     position: relative;
     margin-top: 20px;

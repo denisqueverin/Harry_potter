@@ -80,6 +80,8 @@ const MainPage = () => {
                   setCurrentPage(1);
                 }}
               />
+            <button className={styles.clearLittleButton} onClick={() => {
+                setSelectedColor(undefined)}}>reset color</button>
             </div>
             <Filter
               title={"Gender"}
@@ -95,6 +97,8 @@ const MainPage = () => {
                 setCurrentPage(1);
               }}
             />
+            <button className={styles.clearLittleButton} onClick={() => {
+                setSelectedGender(undefined)}}>reset gender</button>
             <Filter
               title={"Faculty"}
               value={selectedFaculty}
@@ -109,6 +113,8 @@ const MainPage = () => {
                 setCurrentPage(1);
               }}
             />
+            <button className={styles.clearLittleButton} onClick={() => {
+                setSelectedFaculty(undefined)}}>reset faculty</button>
             <Filter
               title={"Alive"}
               value={selectedAlive}
@@ -123,6 +129,8 @@ const MainPage = () => {
                 setCurrentPage(1);
               }}
             />
+            <button className={styles.clearLittleButton} onClick={() => {
+                setSelectedAlive(undefined)}}>reset alive</button>
             <Filter
               title={"Eye color"}
               value={selectedEyeColour}
@@ -137,6 +145,8 @@ const MainPage = () => {
                 setCurrentPage(1);
               }}
             />
+            <button className={styles.clearLittleButton} onClick={() => {
+                setSelectedEyeColour(undefined)}}>reset eye color</button>
             <button
               className={styles.clearButton}
               onClick={() => {
@@ -147,7 +157,7 @@ const MainPage = () => {
                 setSelectedEyeColour(undefined);
               }}
             >
-              reset
+              reset all
             </button>
           </div>
           <ComponentHeroes heroes={currentHeroes} />
